@@ -1,0 +1,203 @@
+
+dc2022@ubuntu-srv:~/it2002/MadiarovaRauana$ hadoop jar lc.jar LetterCount /user/dc2022/MadiarovaRauana/input /user/dc2022/MadiarovaRauana/output
+2022-11-05 09:01:31,779 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /127.0.0.1:8032
+2022-11-05 09:01:32,102 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2022-11-05 09:01:32,115 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/dc2022/.staging/job_1666790202597_0198
+2022-11-05 09:01:32,317 INFO input.FileInputFormat: Total input files to process : 1
+2022-11-05 09:01:32,370 INFO mapreduce.JobSubmitter: number of splits:1
+2022-11-05 09:01:32,476 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1666790202597_0198
+2022-11-05 09:01:32,476 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2022-11-05 09:01:32,620 INFO conf.Configuration: resource-types.xml not found
+2022-11-05 09:01:32,620 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2022-11-05 09:01:32,679 INFO impl.YarnClientImpl: Submitted application application_1666790202597_0198
+2022-11-05 09:01:32,711 INFO mapreduce.Job: The url to track the job: http://ubuntu-srv:8088/proxy/application_1666790202597_0198/
+2022-11-05 09:01:32,711 INFO mapreduce.Job: Running job: job_1666790202597_0198
+2022-11-05 09:01:38,840 INFO mapreduce.Job: Job job_1666790202597_0198 running in uber mode : false
+2022-11-05 09:01:38,842 INFO mapreduce.Job:  map 0% reduce 0%
+2022-11-05 09:01:43,950 INFO mapreduce.Job:  map 100% reduce 0%
+2022-11-05 09:01:48,022 INFO mapreduce.Job:  map 100% reduce 100%
+2022-11-05 09:01:49,051 INFO mapreduce.Job: Job job_1666790202597_0198 completed successfully
+2022-11-05 09:01:49,150 INFO mapreduce.Job: Counters: 54
+        File System Counters
+                FILE: Number of bytes read=1029
+                FILE: Number of bytes written=552935
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=1586468
+                HDFS: Number of bytes written=770
+                HDFS: Number of read operations=8
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+                Launched map tasks=1
+                Launched reduce tasks=1
+                Data-local map tasks=1
+                Total time spent by all maps in occupied slots (ms)=2920
+                Total time spent by all reduces in occupied slots (ms)=1991
+                Total time spent by all map tasks (ms)=2920
+                Total time spent by all reduce tasks (ms)=1991
+                Total vcore-milliseconds taken by all map tasks=2920
+                Total vcore-milliseconds taken by all reduce tasks=1991
+                Total megabyte-milliseconds taken by all map tasks=2990080
+                Total megabyte-milliseconds taken by all reduce tasks=2038784
+        Map-Reduce Framework
+                Map input records=33216
+                Map output records=1260497
+                Map output bytes=7577044
+                Map output materialized bytes=1029
+                Input split bytes=132
+                Combine input records=1260497
+                Combine output records=122
+                Reduce input groups=122
+                Reduce shuffle bytes=1029
+                Reduce input records=122
+                Reduce output records=122
+                Spilled Records=244
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=129
+                CPU time spent (ms)=3560
+                Physical memory (bytes) snapshot=636207104
+                Virtual memory (bytes) snapshot=5356179456
+                Total committed heap usage (bytes)=595591168
+                Peak Map Physical memory (bytes)=407695360
+                Peak Map Virtual memory (bytes)=2677088256
+                Peak Reduce Physical memory (bytes)=228511744
+                Peak Reduce Virtual memory (bytes)=2679091200
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=1586336
+        File Output Format Counters
+                Bytes Written=770
+dc2022@ubuntu-srv:~/it2002/MadiarovaRauana$ hadoop fs -cat /user/dc2022/MadiarovaRauana/output/part-r-00000
+!       1575
+"       22
+#       1
+$       2
+%       7
+&       3
+'       7
+(       1793
+)       1805
+*       80
++       1
+,       16521
+-       311
+.       22487
+/       65
+0       279
+1       442
+2       218
+3       129
+4       125
+5       111
+6       100
+7       76
+8       179
+9       121
+:       2584
+;       32
+?       2233
+A       3546
+B       3578
+C       2585
+D       2131
+E       2119
+F       1446
+G       1696
+H       3941
+I       4962
+J       1079
+K       669
+L       2441
+M       4045
+N       1714
+O       2563
+P       1879
+Q       134
+R       1579
+S       3775
+T       4605
+U       385
+V       396
+W       2556
+X       21
+Y       999
+Z       144
+[       42
+]       42
+_       4508
+a       90564
+b       17848
+c       27913
+d       47467
+e       141150
+f       25561
+g       26518
+h       69137
+i       77509
+j       1332
+k       11534
+l       53101
+m       27847
+n       79439
+o       90156
+p       20975
+q       1208
+r       69454
+s       73886
+t       97145
+u       33375
+v       9470
+w       23897
+x       1443
+y       23595
+z       932
+£       31
+°       3
+À       1
+Æ       3
+Ç       1
+È       2
+É       1
+Ü       2
+à       18
+á       12
+ä       1
+æ       7
+ç       1
+è       21
+é       60
+ê       7
+ë       1
+î       2
+ñ       6
+ò       2
+ó       2
+ô       3
+ö       2
+ù       4
+ú       1
+û       2
+ü       5
+ā       21
+œ       7
+ſ       11
+        2
+—       2405
+’       4489
+“       4
+”       5
+†       2
+•       1
+…       3
+✠       1
